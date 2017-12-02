@@ -11,3 +11,26 @@ numpy versão 1.5 or later: http://www.numpy.org/
 scipy versão 0.10 or later: http://www.scipy.org/
 matplotlib versão 1.3 or later: http://matplotlib.org/
 scikit-learn versão 0.14 or later: http://scikit-learn.org
+
+
+
+Dataset utilizado
+Fonte:
+    
+https://archive.ics.uci.edu/ml/machine-learning-databases/concrete/compressive/
+Concrete Compressive Strength 
+---------------------------------
+Data Type: multivariate
+ 
+Abstract: Concrete is the most important material in civil engineering. The 
+concrete compressive strength is a highly nonlinear function of age and 
+ingredients. These ingredients include cement, blast furnace slag, fly ash, 
+water, superplasticizer, coarse aggregate, and fine aggregate.
+---------------------------------
+Sources: 
+  Original Owner and Donor
+  Prof. I-Cheng Yeh
+  Department of Information Management 
+  Chung-Hua University, 
+  Hsin Chu, Taiwan 30067, R.O.C.
+  e-mail:icyeh@chu.edu.tw
