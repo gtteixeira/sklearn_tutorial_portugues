@@ -16,7 +16,7 @@ from sklearn.model_selection import train_test_split
 
 
 
-input_file = "/home/ubuntu1604/Área de Trabalho/arquivosPython/Concrete_Data.csv"
+input_file = "seuDiretorio/Concrete_Data.csv"
 
 # Importando dados do arquivo CSV, com delimitador default sendo virgula
 df = pd.read_csv(input_file, header = 0)
