@@ -15,7 +15,7 @@ from sklearn.model_selection import train_test_split
 
 
 
-
+# Coloque aqui o diretório de seu arquivo
 input_file = "seuDiretorio/Concrete_Data.csv"
 
 # Importando dados do arquivo CSV, com delimitador default sendo virgula
@@ -56,8 +56,6 @@ print('Variance score: %.2f \n' % r2_score(y_test, y_pred))
 
 ################## Randon forests Regressor #############################################
 
-
-
 # Criando um objeto regressor com Random Forest
 randForest = RandomForestRegressor(100)
 
@@ -75,8 +73,6 @@ print('Variance score: %.2f \n' % r2_score(y_test, y_pred))
 
 ##################    MLP   REGRESSOR #########################
 
-
-
 # Criando um objeto regressor MLP
 
 nn = MLPRegressor(
@@ -84,6 +80,17 @@ nn = MLPRegressor(
     learning_rate='constant', learning_rate_init=0.01, power_t=0.5, max_iter=1000, shuffle=True,
     random_state=0, tol=0.0001, verbose=False, warm_start=False, momentum=0.9, nesterovs_momentum=True,
     early_stopping=False, validation_fraction=0.1, beta_1=0.9, beta_2=0.999, epsilon=1e-08)
+
+#Criando um padronizador de escala
+scaler = StandardScaler()
+#Gerando um padronizador de escalas com os dados de treino
+scaler.fit(X_train)
+
+#Aplicando as transformações aos dados
+X_train = scaler.transform(X_train)
+X_test = scaler.transform(X_test)
+
+print ("Processando treinamento da rede......\n")
 
 # Treinando o modelo com os dados de treinamento
 nn.fit(X_train, y_train)
